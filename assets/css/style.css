@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* ============= Main Styling ========== */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --black: #0b0c17;
+  --pink: #ff3571;
+  --grey: #dddddd;
+  --blue: #3c30ff;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+  padding: 2% 0;
+}
+h4 {
+  padding: 2% 0;
+}
+h5 {
+  color: var(--grey);
+  font-size: 2.5rem;
+  padding-bottom: 5%;
+}
+
+section:not(.photos),
+footer,
+.headline {
+  margin: 0 10%;
+}
+nav div {
+  margin-left: 5%;
+}
+nav img {
+  width: 4rem;
+  height: 7%;
+  position: fixed;
+}
+
+/* ============= Header Styling ========== */
+
+header {
+  background: url("../img/ilustracion1.png") no-repeat;
+  background-size: 55%;
+  background-position: top right;
+  position: relative;
+  min-height: 100vh;
+}
+
+.headerImage {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  animation-name: people;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+header div img {
+  width: 50%;
+}
+
+.headline {
+  width: 30%;
+  margin-top: 10%;
+}
+.headline span {
+  width: 50px;
+  display: inline-block;
+}
+
+.headline p:last-of-type {
+  color: var(--pink);
+  margin-top: 15%;
+  margin-bottom: 5%;
+}
+
+/* ============= Section Styling ========== */
+
+.photos img {
+  width: 100%;
+}
+.idea span img {
+  height: 2.5rem;
+  display: inline-block;
+}
+
+.idea {
+  display: flex;
+  justify-content: space-around;
+  padding: 5% 0;
+}
+
+.idea div:nth-of-type(1) {
+  width: 25%;
+}
+.idea div:nth-of-type(2) {
+  width: 40%;
+}
+
+section:nth-of-type(3) h3 {
+  width: 50%;
+  padding-bottom: 5%;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20%;
+}
+.title img {
+  width: 40px;
+}
+article {
+  display: flex;
+  gap: 15px;
+  text-align: left;
+}
+
+section:nth-of-type(5) {
+  text-align: center;
+  padding: 5% 0;
+}
+.steps {
+  display: flex;
+}
+.steps div {
+  width: 50%;
+  padding: 2% 0;
+}
+.bigPic {
+  width: 80%;
+}
+.icon {
+  width: 2.5rem;
+}
+.text {
+  margin-top: 5%;
+}
+section:last-of-type {
+  text-align: center;
+}
+section:last-of-type div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2% 0;
+}
+
+input {
+  width: 40%;
+  height: 2rem;
+  text-align: center;
+  border-style: none;
+  box-shadow: 0 0 1em var(--grey);
+}
+button {
+  background-color: var(--pink);
+  color: white;
+  width: 20%;
+  height: 2rem;
+  border-style: none;
+  margin: 2% 0;
+}
+button:hover {
+  background-image: linear-gradient(to right, var(--pink), var(--blue));
+}
+/* ============= Footer Styling ========== */
+
+footer {
+  display: flex;
+}
+footer img {
+  width: 2%;
+}
+
+@keyframes people {
+  100% {
+    transform: translateY(10%);
+  }
+}
+/* ============= Media Queries ========== */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  section:not(.photos),
+  footer,
+  .headline {
+    margin: 0 5%;
+  }
+  nav div {
+    margin-left: 5%;
+    font-size: 0.8rem;
+  }
+  nav img {
+    width: 4%;
+  }
+  header {
+    min-height: 50vh;
+  }
+  .headline {
+    width: 50%;
+    margin-top: 5%;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  .idea {
+    display: block;
+  }
+
+  .idea div:nth-of-type(1) {
+    width: 70%;
+  }
+  .idea div:nth-of-type(2) {
+    width: 100%;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .steps div {
+    width: 80%;
+  }
+  .bigPic {
+    width: 100%;
+  }
+  .icon {
+    width: 2rem;
+  }
+
+  section:nth-of-type(3) h3 {
+    width: 100%;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+  }
+  .title article {
+    justify-content: center;
+    padding: 5% 0;
+  }
+
+  footer img {
+    width: 1.5rem;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2.7rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h5 {
+    font-size: 2rem;
+  }
+  nav div {
+    margin-left: 5%;
+    height: 5%;
+  }
+  nav img {
+    width: 6%;
+    height: 5%;
+  }
+}
